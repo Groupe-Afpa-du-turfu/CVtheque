@@ -1,0 +1,46 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    /* "*" veut dire qu'on applique ce code css à tout le document */
+    /* pour que le padding soit toujours pris en compte dans le calucul des largeurs */
+    box-sizing: border-box;
+}
+
+.modal {
+    /* .modal est l'élément global qui permet l'affichage de la boite sur l'entiereté de la fenetre */
+    position: fixed;
+    /* ---------- Centrer l'affichage de la fenetre : -------- */
+    display: flex;
+    /* Alignement sur Y */
+    align-items: center;
+    /* Alignement sur X */
+    justify-content: center;
+    /* ----------EO Centrer l'affichage de la fenetre : -------- */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* creation d'un background avec opacité à 80% */
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-wrapper {
+    background-color: whitesmoke;
+    /* Largeur de la fenetre : */
+    width: 800px;
+    padding: 20px;
+    /* largeur maxi :
+    100vw : veut dire largeur totale de l'écran
+    Ci dessous on calcule la largeur de lécran - 20px :  */
+    max-width: calc(100vw - 20px);
+    /* hauteur maxi :
+    100vh : veut dire hauteur totale de l'écran
+    Ci dessous on calcule la hauteur de lécran - 20px :  */
+    max-height: calc(100vh - 20px);
+    /* En cas de débordement "overflow" permet d'afficher une scroll bar */
+    overflow: auto;
+}

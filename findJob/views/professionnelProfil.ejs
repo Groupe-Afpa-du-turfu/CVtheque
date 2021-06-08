@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <%- include('../viewsPartials/headPro'); %>
+</head>
+<!-- ************* Page : Edition Du Profil Entreprise *************** -->
+<!-- ***************************************************************** -->
+
+<body>
+    <header>
+        <%- include('../viewsPartials/headerPro'); %>
+    </header>
+    <div>
+        <hr>
+        <br>
+        <!--  -->
+        <form action="voir où j'envoie les données du formulaire !?" method="post">
+            <div>
+                <div>
+                    <label for="raisonSociale">Raison Sociale :</label>
+                    <input type="text" id="raisonSociale" name="raison_Sociale" placeholder="Ex: NomDeMonEntreprise">
+                </div>
+                <div>
+                    <label for="siret">N°SIRET :</label>
+                    <input type="text" id="siret" name="_siret" placeholder="14 chiffres" required>
+                </div>
+                <div>
+                    <label for="nomDg">Nom D.Général :</label>
+                    <input type="text" id="nomDg" name="nom_Dg" placeholder="Ex: Estlechef" required>
+                </div>
+                <div>
+                    <label for="prenomDg">Prénom D.Général :</label>
+                    <input type="text" id="prenomDg" name="prenom_Dg" placeholder="Ex: Denis" required>
+                </div>
+                <div>
+                    <label for="adresse">Adresse :</label>
+                    <input type="text" id="adresse" name="_adresse" placeholder="Ex: 3 rue des arpètes" required>
+                </div>
+                <div>
+                    <label for="ville">Ville :</label>
+                    <input type="text" id="ville" name="_ville" placeholder="Ex: Chartres" required>
+                </div>
+                <div>
+                    <label for="codePostal">Code Postal :</label>
+                    <input type="text" id="codePostal" name="code_Postal" placeholder="Ex: 28000" required>
+                </div>
+                <div>
+                    <label for="tel">Téléphone :</label>
+                    <input type="text" id="tel" name="_tel" placeholder="Ex: 01 22 33 44 55" required>
+                </div>
+                <div>
+                    <label for="mail">E-mail :</label>
+                    <input type="mail" id="mail" name="_mail" placeholder="Ex: monMail@maSociete.fr" required>
+                </div>
+                <div>
+                    <label for="descriptionSociete">Description De La Société :</label>
+                    <textarea id="descriptionSociete" name="description_Societe" placeholder="Décrivez succintement ce que produit votre entreprise !" required></textarea>
+                </div>
+            </div>
+
+            <div class="button">
+                <button type="submit">Sauvegarder</button>
+            </div>
+        </form>
+        <!--  -->
+        <br>
+        <hr>
+    </div>
+
+    <!---------------- Actions / Logique de la page  ---------------->
+
+    <div>
+        <a href="/professionnel">Abandonner</a>
+    </div>
+
+    <!-- ***************************************************************** -->
+
+    <footer>
+        <%- include('../viewsPartials/footerPro'); %>
+    </footer>
+</body>
+
+
+</html>

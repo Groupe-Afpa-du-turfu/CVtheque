@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <%- include('../viewsPartials/headPro'); %>
+</head>
+
+
+<!-- ***************************************************************** -->
+
+<body>
+    <header>
+        <%- include('../viewsPartials/headerPro'); %>
+    </header>
+    <div>
+        <div>
+            <div>
+                <p>Filtrer par : </p>
+                <table>
+                    <tr>
+                        <th>|Secteur Professionel </th>
+                        <th>|Disponnibilité </th>
+                        <th>|Secteur Géographique </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select id="listeDeroulanteSecteurPro" name="liste_Deroulante_SecteurPro" required>
+                            <option value="" >Sélectionner un choix</option>
+                            <option value="agriculture" >Agriculture / Agroalimentaire</option>
+                            <option value="artisanat" >Artisanat</option>
+                            <option value="banque_assurance" >Banque / Assurance</option>
+                            <option value="bois_imprimerie" >Bois / Papier / Carton / Imprimerie</option>
+                            <option value="btp">BTP / Matériaux de construction</option>
+                            <option value="chimie">Chimie / Parachimie</option>
+                            <option value="commerce">Commerce / Négoce / Distribution</option>
+                            <option value="communication">Communication / Multimédia / Edition</option>
+                            <option value="electronique">Electronique / Electricité</option>
+                            <option value="energie">Energie</option>
+                            <option value="conseils">Etudes et conseils</option>
+                            <option value="evenementiel">Evénementiel</option>
+                            <option value="industrie">Industrie</option>
+                            <option value="informatique">Informatique / Télécoms</option>
+                            <option value="machines">Machines et équipements / Automobile</option>
+                            <option value="métallurgie">Métallurgie</option>
+                            <option value="plastique">Plastique / Caoutchouc</option>
+                            <option value="sante">Santé</option>
+                            <option value="services">Services aux entreprises</option>
+                            <option value="textile">Textile / Habillement</option>
+                            <option value="tourisme">Tourisme</option>
+                            <option value="logistique">Logistique / Transports</option>
+                            </select>
+                        </td>
+                        <td><input type="date" id="dateDisponnibilite" name="date_Disponnibilite"></td>
+                        <td>
+                            <select type="text" id="lieuExercice" name="lieu_Exercice" required>
+                            <option value="" >Sélectionner un Lieu</option>
+                            <option value="agriculture" >Paris</option>
+                            <option value="artisanat" >Lille</option>
+                            <option value="banque_assurance" >Strasbourg</option>
+                            <option value="bois_imprimerie" >Marseille</option>
+                            <option value="btp">Brest</option>
+                            <option value="chimie">Saint-Nazaire</option>
+                            </select>
+                        </td>
+                    </tr>
+                    </tr>
+                </table>
+            </div>
+            <div class="button">
+                <button type="submit">Lancer la recherche</button>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <p>Veuillez trouver la liste des candidats potentiels : </p>
+            <br>
+            <table>
+                <tr>
+                    <th>|Nom </th>
+                    <th>|Prénom </th>
+                </tr>
+                <tr>
+                    <td>1-1</td>
+                    <td>1-2</td>
+                </tr>
+                <tr>
+                    <td>2-1</td>
+                    <td>2-2</td>
+                </tr>
+                <tr>
+                    <td>3-1</td>
+                    <td>3-2</td>
+                </tr>
+                <tr>
+                    <td>4-1</td>
+                    <td>4-2</td>
+                </tr>
+                <tr>
+                    <td>5-1</td>
+                    <td>5-2</td>
+                </tr>
+                <tr>
+                    <td>6-1</td>
+                    <td>6-2</td>
+                </tr>
+            </table>
+
+        </div>
+        <br>
+        <hr>
+    </div>
+
+    <!---------------- Actions / Logique de la page  ---------------->
+
+    <div>
+        <a href="/professionnel">Abandonner</a>
+    </div>
+
+    <footer>
+        <%- include('../viewsPartials/footerPro'); %>
+    </footer>
+</body>
+<!-- ***************************************************************** -->
+
+</html>

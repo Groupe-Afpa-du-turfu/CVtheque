@@ -1,9 +1,16 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+
+/* -------------------------------------------------------------- Route lié au deux -----------------------------------------------------------------------*/
+
+router.get('/', (req, res) => { // Route de la home page
+    res.render('index', { title: 'jobdate', title2: 'jobbadd' });
 });
 
-module.exports = router;
+router.get('/actu', (req, res) => { // Route des actus
+    res.render('actu', );
+});
+
+
+module.exports = router; // permet de rendre le fichier index.js visible ailleurs

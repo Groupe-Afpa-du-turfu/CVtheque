@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <%- include('../viewsPartials/headPro'); %>
+</head>
+
+
+<!-- ***************************************************************** -->
+
+<body>
+    <header>
+        <%- include('../viewsPartials/headerPro'); %>
+    </header>
+    <form name="formulaire" action="" method="POST">
+
+        <div>
+            <hr>
+            <br>
+            <div>
+
+                <table>
+                    <tr>
+                        <th>|id table "depot_offre_emploi" </th>
+                        <th>|Intitulé Du Poste </th>
+                        <th>|Type De Contrat </th>
+                        <th>|Prise De Fonctions </th>
+                        <th>|Fin De Contrat </th>
+                        <th>|Selection </th>
+                    </tr>
+                    <% for (var i=0; i < gestionOffre.length; i++) { %>
+                        <tr>
+                            <td>
+                                <!-- Recupération de l'id de l'offre (issu de la bdd) pour permettre l'édition -->
+                                <%=gestionOffre[i].id %>
+                            </td>
+                            <td>
+                                <%=gestionOffre[i].intitule_poste %>
+                            </td>
+                            <td>
+                                <%=gestionOffre[i].type_contrat %>
+                            </td>
+                            <td>
+                                <%=gestionOffre[i].prise_fct %>
+                            </td>
+                            <td>
+                                <%=gestionOffre[i].fin_contrat %>
+                            </td>
+                            <td>
+                                <%=gestionOffre[i].intitule_poste %>
+                            </td>
+
+                            <td> <input type="radio" name="selectionRadio" value="<%=gestionOffre[i].id %>"> </td>
+                        </tr>
+
+                        <% } %>
+                </table>
+
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="button">
+                <button name="envoi" type="button" onclick="modifAction('/professionnel/detailOffre')">Détails de l'offre</button>
+                <button name="envoi" type="button" onclick="modifAction('/professionnel/gestionoffre/edit')">Modifier une offre</button>
+                <button id="deleteBtn" type="submit">Supprimer une offre</button>
+            </div>
+    </form>
+    <br>
+    <hr>
+    </div>
+
+    <!---------------- Actions / Logique de la page  ---------------->
+
+    <div>
+        <a href="/professionnel">Abandonner</a>
+    </div>
+
+    <!-- ***************************************************************** -->
+
+    <footer>
+        <%- include('../viewsPartials/footerPro'); %>
+    </footer>
+
+    <!-- Appel du script qui gère les fonctions des boutons de la page : -->
+    <script type="text/javascript" src="/js/fonctionsBtnVueProGestionOffre.js"></script>
+
+</body>
+
+</html>

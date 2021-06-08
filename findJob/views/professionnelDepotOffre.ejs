@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <%- include('../viewsPartials/headPro'); %>
+</head>
+
+
+<!-- ***************************************************************** -->
+
+<body>
+    <header>
+        <%- include('../viewsPartials/headerPro'); %>
+    </header>
+    <div>
+        <hr>
+        <br>
+        <!-- Donner l'action de creer la route vers /professionnel/depotoffre avec methode post -->
+        <form action="/professionnel/depotoffre" method="POST">
+            <div>
+                <div>
+                    <label for="intitulePoste">Intitulé Du Poste :</label>
+                    <input type="text" id="intitulePoste" name="intitule_poste" placeholder="Ex: Technicien Methodes / Industrialisation">
+                </div>
+                <div>
+                    <label for="typeContrat">Type de contrat :</label>
+                    <select id="typeContrat" name="type_contrat" required>
+                        <option value="">--Choisissez un type--</option>
+                        <option value="cdi">CDI</option>
+                        <option value="cdi">CDI-C</option>
+                        <option value="cdd">CDD</option>
+                        <option value="interim">Interim</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="debutContrat">Début de Contrat :</label>
+                    <input type="date" id="debutContrat" name="prise_fct" required>
+                </div>
+                <div>
+                    <label for="finContrat">Fin de Contrat :</label>
+                    <input type="date" id="finContrat" name="fin_contrat" required>
+                </div>
+                <div>
+                    <label for="lieuExercice">Lieu d'Exercice :</label>
+                    <input type="text" id="lieuExercice" name="lieu_exercice" placeholder="Chartres" required>
+                </div>
+                <div>
+                    <label for="descriptionOffre">Description de l'Offre d'Emploi :</label>
+                    <textarea id="descriptionOffre" name="description_offre" placeholder="Décrivez l'offre d'emploi !" required></textarea>
+                </div>
+            </div>
+
+            <div class="button">
+                <button type="submit">Publier</button>
+            </div>
+        </form>
+        <!--  -->
+        <br>
+        <hr>
+    </div>
+
+    <!---------------- Actions / Logique de la page  ---------------->
+
+    <div>
+        <a href="/professionnel">Abandonner</a>
+    </div>
+
+    <footer>
+        <%- include('../viewsPartials/footerPro'); %>
+    </footer>
+    <!-- ***************************************************************** -->
+
+
+</body>
+
+</html>
