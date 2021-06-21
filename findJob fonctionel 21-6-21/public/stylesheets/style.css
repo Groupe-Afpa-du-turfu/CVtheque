@@ -1,0 +1,63 @@
+body {
+    margin-top: 150px;
+    margin-left: 250px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-image: url("../images/fond_jobdate_bleu.jpg");
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.HeaderPro {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    color: red;
+}
+
+.champHeaderPro {
+    color: rgb(30, 221, 23);
+    text-align: center;
+}
+
+#titreVertical {
+    transform: rotate(-0deg);
+    text-align: center;
+}
+
+#coordonneesCandidat,
+#formationCandidat,
+#contactCandidat,
+#experienceCandidat {
+    border: 1px dotted black;
+}
+
+
+/* Nommage des plages pour la grid du profilCandidatVueProPopup */
+
+#coordonneesCandidat {
+    grid-area: coordonneesCandidat;
+}
+
+#contactCandidat {
+    grid-area: contactCandidat;
+}
+
+#formationCandidat {
+    grid-area: formationCandidat;
+}
+
+#experienceCandidat {
+    grid-area: experienceCandidat;
+}
+
+
+/* definition de la grid profilCandidatVueProPopup */
+
+.gridArea_profilCandidatVueProPopup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-areas: "coordonneesCandidat experienceCandidat" "formationCandidat experienceCandidat" "contactCandidat experienceCandidat";
+    text-align: justify;
+}

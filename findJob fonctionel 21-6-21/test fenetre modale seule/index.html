@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="styleFenetreModale.css">
+
+</head>
+
+<body>
+    <a href="#modal1" class="js-modal">Ouvrir la boite modale</a>
+
+    <aside id="modal1" class="modal" aria-hidden="true" style="display: none;" role='dialog' aria-modal="false" aria-labelledby="title">
+        <!-- aria-hidden="true" : permet de cacher par defaut la fenetre -->
+        <!-- aria-modal="false" : permet de gérer les capteurs de rotation ecran (à confirmer) -->
+        <!-- aria-labelledby="title-modal1" :permet de gérer le renvoi d'un tittre dans la fenetre via un id -->
+        <!-- role='dialog' : permet de donner un role à la fenetre (plus pour les liseuses) -->
+        <!-- style="display: none;" : permet de definir si la fenetre est visible ou non (utile pour le code js permettant son affichage)  -->
+        <!-- class ..... => Cette classe est ajouté aux Liens qui permettent d'afficher la fenetre modale via le js -->
+        <div class="modal-wrapper js-modal-stop">
+            <button class="js-modal-close">Fermer la fenetre</button>
+            <div class="gridArea_profilCandidatVueProPopup">
+
+                <!---------------- Coordonnees_Candidat -------------------->
+
+                <div id="coordonneesCandidat" name="coordonnees_Candidat">
+                    <div>
+                        <p id="titreVertical">Coordonnees</p>
+                        <label for="nomCandidat">Nom : </label>
+                        <h3 id="nomCandidat" name="nom_Candidat" value="valeur issue de la bdd via script js">
+
+                            <label for="prenomCandidat">Prénom : </label>
+                            <h3 id="prenomCandidat" name="prenom_Candidat" value="valeur issue de la bdd via script js">
+
+                                <label for="adresseCandidat">Adresse : </label>
+                                <h3 id="adresseCandidat" name="adresse_Candidat" value="valeur issue de la bdd via script js">
+
+                                    <label for="villeCandidat">Ville : </label>
+                                    <h3 id="villeCandidat" name="ville_Candidat" value="valeur issue de la bdd via script js">
+
+                                        <label for="codePostalCandidat">Code Postal : </label>
+                                        <h3 id="codePostalCandidat" name="code_Postal_Candidat" value="valeur issue de la bdd via script js">
+
+                                            <label for="telCandidat">Tel : </label>
+                                            <h3 id="telCandidat" name="tel_Candidat" value="valeur issue de la bdd via script js">
+
+                                                <label for="mailCandidat">@-mail : </label>
+                                                <h3 id="mailCandidat" name="mail_Candidat" value="valeur issue de la bdd via script js">
+                    </div>
+                </div>
+                <br>
+
+                <!---------------- Formation_Candidat -------------------->
+
+                <div id="formationCandidat" name="formation_Candidat">
+                    <div>
+                        <p id="titreVertical">Formation</p>
+                        <label for="diplomeCandidat">Diplôme : </label>
+                        <h3 id="diplomeCandidat" name="diplome_Candidat" value="valeur issue de la bdd via script js">
+
+                            <label for="anneeObtentionDiplomeCandidat">Année d'obtention : </label>
+                            <h3 id="anneeObtentionDiplomeCandidat" name="annee_Obtention_Diplome_Candidat" value="valeur issue de la bdd via script js">
+
+                                <label for="ecoleCandidat">Ecole / Organisme : </label>
+                                <h3 id="ecoleCandidat" name="ecole_Candidat" value="valeur issue de la bdd via script js">
+
+                                    <label for="villeCandidat">Ville : </label>
+                                    <h3 id="villeCandidat" name="ville_Candidat" value="valeur issue de la bdd via script js">
+                    </div>
+                </div>
+                <br>
+
+                <!---------------- Contact -------------------->
+
+                <div id="contactCandidat" name="contact_Candidat">
+                    <p id="titreVertical"> Formulaire de contact </p>
+                </div>
+
+
+                <!---------------- Experience_Pro -------------------->
+
+                <div id="experienceCandidat" name="experience_Candidat">
+                    <div>
+                        <p id="titreVertical">Expérience Professionnelle</p>
+                        <label for="typeEmploiCandidat">Type d'emploi : </label>
+                        <h3 id="typeEmploiCandidat" name="type_Emploi_Candidat" value="valeur issue de la bdd via script js">
+
+                            <label for="entrepriseCandidat">Entreprise : </label>
+                            <h3 id="entrepriseCandidat" name="entreprise_Candidat" value="valeur issue de la bdd via script js">
+
+                                <label for="secteurCandidat">Secteur : </label>
+                                <h3 id="secteurCandidat" name="secteur_Candidat" value="valeur issue de la bdd via script js">
+
+                                    <label for="contratCandidat">Contrat : </label>
+                                    <h3 id="contratCandidat" name="contrat_Candidat" value="valeur issue de la bdd via script js">
+
+                                        <label for="lieuTravailCandidat">Lieu : </label>
+                                        <h3 id="lieuTravailCandidat" name="lieu_Travail_Candidat" value="valeur issue de la bdd via script js">
+
+                                            <label for="statutCandidat">Actuellement en poste ? : </label>
+                                            <h3 id="statutCandidat" name="statut_Candidat" value="valeur issue de la bdd via script js">
+
+                                                <label for="dateDebutExpCandidat">Date de début : </label>
+                                                <h3 id="dateDebutExpCandidat" name="dateDebutExpCandidat" value="valeur issue de la bdd via script js">
+
+                                                    <label for="dateFinExpCandidat">Date de fin : </label>
+                                                    <h3 id="dateFinExpCandidat" name="dateFinExpCandidat" value="valeur issue de la bdd via script js">
+
+                                                        <label for="descriptionPosteCandidat">Descriptif du poste occupé : </label>
+                                                        <h3 id="descriptionPosteCandidat" name="descriptionPosteCandidat" value="valeur issue de la bdd via script js">
+
+                    </div>
+                </div>
+                <br>
+
+
+
+
+            </div>
+
+            <!---------------- Actions / Logique de la page  ---------------->
+
+            <div class="button">
+                <button type="submit">Suivant</button>
+                <button type="submit">Précédent</button>
+                <button type="submit">Quitter</button>
+            </div>
+
+        </div>
+    </aside>
+    <!-- Appel du script js permettant de lancer/fermer la fenetre : -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

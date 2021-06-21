@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <%- include('../viewsPartials/headPro'); %>
+</head>
+
+
+<!-- ***************************************************************** -->
+
+<body>
+    <header>
+        <%- include('../viewsPartials/headerPro'); %>
+    </header>
+    <div>
+        <hr>
+        <br>
+        <!-- Donner l'action de creer la route vers /professionnel/depotoffre avec methode post -->
+        <form action="" method="">
+            <div>
+                <div>
+                    <!-- Recupération de l'id de l'offre (issu de la bdd) pour permettre l'update de l'id concerné-->
+                    <label for="id" hidden>id :</label>
+                    <input type="text" id="id" name="id" value="<%=result[0].id %>" hidden>
+                </div>
+
+                <div>
+                    <label for="intitulePoste">Intitulé Du Poste :</label>
+                    <input type="text" id="intitulePoste" name="intitule_poste" value="<%=result[0].intitule_poste %>" disabled="true">
+                </div>
+                <div>
+                    <label for="typeContrat">Type de contrat :</label>
+                    <input type="text" id="typeContrat" name="type_contrat" value="<%=result[0].type_contrat %>" disabled="true">
+                </div>
+                <div>
+                    <label for="debutContrat">Début de Contrat :</label>
+                    <input type="text" id="debutContrat" name="prise_fct" value="<%=result[0].prise_fct %>" disabled="true">
+                </div>
+                <div>
+                    <label for="finContrat">Fin de Contrat :</label>
+                    <input type="text" id="finContrat" name="fin_contrat" value="<%=result[0].fin_contrat %>" disabled="true">
+                </div>
+                <div>
+                    <label for="lieuExercice">Lieu d'Exercice :</label>
+                    <input type="text" id="lieuExercice" name="lieu_exercice" value="<%=result[0].lieu_exercice %>" disabled="true">
+                </div>
+                <div>
+                    <label for="descriptionOffre">Description de l'Offre d'Emploi :</label>
+                    <textarea id="descriptionOffre" name="description_offre" disabled="true"><%=result[0].description_offre %></textarea>
+                </div>
+            </div>
+
+
+        </form>
+        <!--  -->
+        <br>
+        <hr>
+    </div>
+
+    <!---------------- Actions / Logique de la page  ---------------->
+
+    <div>
+        <a href="/professionnel">Abandonner</a>
+    </div>
+
+    <footer>
+        <%- include('../viewsPartials/footerPro'); %>
+    </footer>
+    <!-- ***************************************************************** -->
+
+
+</body>
+
+</html>
