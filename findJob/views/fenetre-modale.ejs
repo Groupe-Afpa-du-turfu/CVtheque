@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/stylesheets/styleFenetreModale.css">
+
+</head>
+
+<body>
+    <a href="#modal1" class="js-modal">Ouvrir la boite modale</a>
+    <!-- <script type="text/javascript">
+        document.write('<div>Je passe ici</div>');
+    </script> -->
+
+    <aside id="modal1" class="modal" aria-hidden="true" style="display: none;" role='dialog' aria-modal="false" aria-labelledby="title">
+        <!-- aria-hidden="true" : permet de cacher par defaut la fenetre -->
+        <!-- aria-modal="false" : permet de gérer les capteurs de rotation ecran (à confirmer) -->
+        <!-- aria-labelledby="title-modal1" :permet de gérer le renvoi d'un titre dans la fenetre via un id -->
+        <!-- role='dialog' : permet de donner un role à la fenetre (plus pour les liseuses) -->
+        <!-- style="display: none;" : permet de definir si la fenetre est visible ou non (utile pour le code js permettant son affichage)  -->
+        <!-- class ..... => Cette classe est ajouté aux Liens qui permettent d'afficher la fenetre modale via le js -->
+        <div class="modal-wrapper js-modal-stop">
+            <button class="js-modal-close">Fermer la fenetre</button>
+            <h2 id="title">
+                <%= title %>
+            </h2>
+            <p>Code html classique d'une page.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis voluptatum soluta delectus? Quae nam dolores, voluptas harum laboriosam enim sit culpa pariatur repellat quaerat eum ducimus, possimus, nemo libero! Consequatur quae at aspernatur.
+                Soluta cum nemo, ratione asperiores eos commodi est fugiat quis officia optio exercitationem minima aspernatur? Iure, eveniet?</p>
+            <input type="text">
+            <input type="text">
+
+        </div>
+    </aside>
+    <!-- Appel du script js permettant de lancer/fermer la fenetre : -->
+
+    <script type="texte/javascript" src="/public/js/fenetre-modale.js"></script>
+
+</body>
+
+</html>

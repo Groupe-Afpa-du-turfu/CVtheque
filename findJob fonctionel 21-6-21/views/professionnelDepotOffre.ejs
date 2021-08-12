@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <%- include('../viewsPartials/headPro'); %>
+</head>
+
+
+<!-- ***************************************************************** -->
+
+<body>
+    <header>
+        <%- include('../viewsPartials/headerPro'); %>
+    </header>
+    <div>
+        <div class="container">
+            <!-- Message erreurs : lié aux contraintes "check" appliquées aux inputs cf. : controller -->
+            <!-- la var "alert" est definie dans la route GET qui permet d'afficher la vue de ce formulaire -->
+            <% if (typeof alert !='undefined' ){%>
+                <% alert.forEach(function(error){%>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <%= error.msg %>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                    </div>
+                    <% }) %>
+                        <% } %>
+
+        </div>
+        <hr>
+        <br>
+        <!-- Donner l'action de creer la route vers /professionnel/depotoffre avec methode post -->
+        <form action="/professionnel/depotoffre" method="POST">
+            <div>
+                <div>
+                    <label for="intitulePoste">Intitulé Du Poste :</label>
+                    <input type="text" style="text-transform: uppercase;" id="intitulePoste" name="intitule_poste" placeholder="Ex: Technicien Methodes / Industrialisation">
+                </div>
+                <div>
+                    <label for="typeContrat">Type de contrat :</label>
+                    <select id="typeContrat" name="type_contrat">
+                        <option value="">--Choisissez un type--</option>
+                        <option value="CDI">CDI</option>
+                        <option value="CDI-C">CDI-C</option>
+                        <option value="CDD">CDD</option>
+                        <option value="INTERIM">INTERIM</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="debutContrat">Début de Contrat :</label>
+                    <input type="date" id="debutContrat" name="prise_fct">
+                </div>
+                <div>
+                    <label for="finContrat">Fin de Contrat :</label>
+                    <input type="date" id="finContrat" name="fin_contrat">
+                </div>
+                <div>
+                    <label for="lieuExercice">Lieu d'Exercice :</label>
+                    <input type="text" style="text-transform: capitalize;" id="lieuExercice" name="lieu_exercice" placeholder="Chartres">
+                </div>
+                <div>
+                    <label for="descriptionOffre">Description de l'Offre d'Emploi :</label>
+                    <textarea id="descriptionOffre" name="description_offre" placeholder="Décrivez l'offre d'emploi !"></textarea>
+                </div>
+            </div>
+
+            <div class="button">
+                <button type="submit">Publier</button>
+            </div>
+        </form>
+        <!--  -->
+        <br>
+        <hr>
+    </div>
+
+    <!---------------- Actions / Logique de la page  ---------------->
+
+    <div>
+        <a href="/professionnel">Abandonner</a>
+    </div>
+
+    <footer>
+        <%- include('../viewsPartials/footerPro'); %>
+    </footer>
+    <!-- ***************************************************************** -->
+
+
+</body>
+
+</html>

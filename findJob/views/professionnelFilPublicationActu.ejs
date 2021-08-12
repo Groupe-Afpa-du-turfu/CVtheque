@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <%- include('../viewsPartials/headPro'); %>
+</head>
+
+
+<!-- ***************************************************************** -->
+
+<body>
+    <header>
+        <%- include('../viewsPartials/headerPro'); %>
+    </header>
+    <div>
+        <hr>
+        <br>
+        <div>
+            <div>
+                <label for="intituleActu">Intitulé de l'Actualité :</label>
+                <input type="text" id="intituleActu" name="intitule_Actu" placeholder="Ex: Actu du jour !!" required>
+            </div>
+            <br>
+            <div>
+                <label for="descriptionActu">Description De l'Actualité :</label>
+                <textarea id="descriptionActu" name="description_Actu" placeholder="Décrivez votre actu !!" required></textarea>
+            </div>
+
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="button">
+            <button type="submit">Publier</button>
+        </div>
+        <br>
+        <hr>
+    </div>
+
+    <!---------------- Actions / Logique de la page  ---------------->
+
+    <div>
+        <a href="/professionnel">Abandonner</a>
+    </div>
+    <!-- ***************************************************************** -->
+
+
+    <footer>
+        <%- include('../viewsPartials/footerPro'); %>
+    </footer>
+</body>
+
+</html>

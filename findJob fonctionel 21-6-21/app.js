@@ -1,15 +1,25 @@
 // import des modules et creation de l'app express
-const express = require('express');
+var express = require('express')
+var expressValidator = require('express-validator');
+
+
+
 const path = require('path');
+const bodyParser = require('body-parser');
 const app = express();
 const ejs = require('ejs');
 const var_dump = require('var_dump');
 const cookieParser = require('cookie-parser');
+
+
+//Acces au fichier .ENV (pour gerer les password à la bdd etc)
 const dotenv = require('dotenv');
+require('dotenv').config();
 
 
 
 // Permet de lire les req.body (pour chercher les infos en )
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookieParser());

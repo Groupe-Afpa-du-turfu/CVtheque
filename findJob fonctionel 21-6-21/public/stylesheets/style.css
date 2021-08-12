@@ -3,7 +3,8 @@ body {
     margin-left: 250px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     background-image: url("../images/fond_jobdate_bleu.jpg");
-    background-attachment: fixed;
+    background-attachment: scroll;
+    background-size: cover;
 }
 
 .HeaderPro {

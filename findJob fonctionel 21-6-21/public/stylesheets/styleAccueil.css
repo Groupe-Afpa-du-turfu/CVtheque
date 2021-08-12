@@ -1,0 +1,9 @@
+body {
+    margin-top: 150px;
+    margin-left: 250px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    /* L'image est positionnée en fond et est centrée */
+    background-image: url("../images/fond_jobdate_accueil.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <%- include('../viewsPartials/headPro'); %>
+</head>
+
+
+
+
+<body>
+    <header>
+        <%- include('../viewsPartials/headerPro'); %>
+    </header>
+    <form id="formulaire" name="formulaire" action="" method="POST">
+
+        <div>
+            <br>
+            <div>
+
+                <table>
+
+                    <tr>
+                        <!-- Recupération de l'id de l'offre (issu de la bdd) pour permettre l'update de l'id concerné-->
+                        <!-- id est en "hidden" => Cela ne concerne que le fonctionnement du site (et non le user)-->
+                        <th hidden>|id table "depot_offre_emploi" </th>
+                        <th>|Intitulé Du Poste </th>
+                        <th>|Type De Contrat </th>
+                        <th>|Prise De Fonctions </th>
+                        <th>|Fin De Contrat </th>
+                        <th>|lieu d'exercice </th>
+                        <th>|Selection </th>
+                    </tr>
+                    <hr>
+                    <% for (var i=0; i < gestionOffre.length; i++) { %>
+                        <tr>
+                            <td hidden>
+                                <%=gestionOffre[i].id %>
+                                    <br>
+                            </td>
+                            <td>
+                                <%=gestionOffre[i].intitule_poste %>
+                                    <br>
+                            </td>
+                            <td>
+                                <%=gestionOffre[i].type_contrat %>
+                                    <br>
+                            </td>
+                            <td>
+                                <%=gestionOffre[i].prise_fct %>
+                                    <br>
+                            </td>
+                            <td>
+                                <%=gestionOffre[i].fin_contrat %>
+                                    <br>
+                            </td>
+                            <td>
+                                <%=gestionOffre[i].lieu_exercice %>
+                                    <br>
+                            </td>
+
+                            <td> <input type="radio" name="selectionRadio" value="<%=gestionOffre[i].id %>"> <br>
+                            </td>
+
+                        </tr>
+                        <% } %>
+                </table>
+
+            </div>
+            <hr>
+            <br>
+            <div class="button">
+                <button id="button1" name="envoi" type="button" disabled="disabled" onclick="modifAction('/professionnel/detailOffre')">Détails de l'offre</button>
+                <button id="button2" name="envoi" type="button" disabled="disabled" onclick="modifAction('/professionnel/gestionoffre/edit')">Modifier une offre</button>
+                <button id="button3" type="submit" disabled="disabled" onclick="modifAction('/professionnel/gestionoffre')">Supprimer une offre</button>
+            </div>
+    </form>
+    <br>
+    <hr>
+    </div>
+
+    <!---------------- Actions / Logique de la page  ---------------->
+
+    <div>
+        <a href="/professionnel"> Se déconnecter</a>
+    </div>
+
+    <!-- ***************************************************************** -->
+
+    <footer>
+        <%- include('../viewsPartials/footerPro'); %>
+    </footer>
+
+    <!-- ***************************************************************** -->
+    <!-- Appel du script qui gère les fonctions des boutons de la page : -->
+    <script type="text/javascript" src="/js/fonctionsBtnVueProGestionOffre.js"></script>
+    <!-- ***************************************************************** -->
+
+</body>
+
+</html>
